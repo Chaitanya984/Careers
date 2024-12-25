@@ -9,19 +9,25 @@
   </head>
   
   <body>
+    {%include 'navbar.html'%}
+    <img class = "img-fluid center" id = "banner" src="{{ url_for('static', filename='image2.jpg') }}"  style= "height: 400px; width: 1400px ; margin-right:auto ;margin-left:auto; display: block ;margin-bottom: 16px">
     <div class = "container" ><h1 class = "text-center mt-2 mb-4" >{{company_name}} </h1>
-      <img class = "img-fluid center" id = "banner" src="{{ url_for('static', filename='image.jpeg') }}"  style="height: 300px; width: 400px ; margin-right:auto ;margin-left:auto; display: block">
-      <h2 class ="text-center mt-2 mb-2 ">About me</h2>
-    <p class = "lead">Lorem ipsum odor amet, consectetuer adipiscing elit. Sem commodo cubilia mollis nisi nullam maximus cursus libero habitant. Pretium bibendum viverra ridiculus diam ridiculus. Faucibus sem nostra vivamus metus consectetur id. Urna non finibus interdum maecenas himenaeos. Morbi tincidunt varius tempor semper augue. Semper felis sit morbi ridiculus nascetur volutpat.</p>
-
-    <h2 class = "text-center mt-2 mb-2">Job Openings</h2>
+    <div class = "row" style = "margin-bottom : 16px;">
+      <div class = " col-md-6">
+    <p class = "lead">Lorem ipsum odor amet, consectetuer adipiscing elit. Himenaeos gravida nec diam eros ridiculus auctor. Eu donec curae adipiscing pellentesque curae proin ridiculus mollis. Condimentum augue sollicitudin auctor turpis varius eget eu. Lectus volutpat ultrices dolor mi augue tortor feugiat ullamcorper tristique. Sodales lectus habitant sit lectus morbi vivamus taciti velit. Arcu conubia etiam maximus felis cubilia id nulla cubilia. Nullam porta mi eu maximus pulvinar sollicitudin. Potenti magna netus dui morbi ad venenatis sagittis ullamcorper odio.</p>
+    </div>
+      <div class = "d-none d-md-block col-md-6">
+      <img src = "{{url_for('static',filename = 'bottom.jpg')}}" style = "height:300px" >
+      </div>
+    </div>
+    <h2 class = "text-center mt-2 mb-2">Open positions</h2>
       <div >
         {% for job in jobs %}
         {% include 'job.html' %}
         {% endfor %}
       </div>
-      <div class = "text-center" >        <button class="btn btn-primary btn-lg">Contact us</button>
-      <p>Copy right 2022 Jovian</p>
+      <div class = "text-center" >        <a href = "mailto:b20091@students.iitmandi.com?subject=hoi"class="btn btn-primary btn-lg">Contact us</a>
+      {%include 'footer.html'%}
 </div>
 </div>
     
