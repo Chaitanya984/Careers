@@ -17,13 +17,13 @@ JOBS = [
 },
 {    
     'id': 3,
-   'title': 'software ENgineer',
+   'title': 'software Engineer',
    'location': 'Remote, India',
    'salary': 'Rs. 15,00,000'
 },
 {    
     'id': 4,
-   'title': 'Frontend ENgineer',
+   'title': 'Frontend Engineer',
    'location': 'San Franscisco,USA',
    'salary': '$10,00,000'
 }
